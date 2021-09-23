@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+<body>
+    <a href="./repeticao.html">REPETIÇÃO</a>
+    <script>
+        alert("olá");
+        let nota1 = 7;
+        let nota2 = 8.5;
+        let nota3 = 6;
+        let nota4 = 7;
+        let media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        if(media >= 7) {
+            console.log("Aprovado")
+        }else {
+            console.log("Reprovado")
+        }
+
+        let idade = 20;
+        console.log(typeof(idade))
+
+        idade = "20";
+        console.log(typeof(idade))
+
+        console.log("20" === 20)
+
+        let nome = "Johnatan"
+        let sobrenome = "Osterloh"
+
+        console.log("O nome é: " + nome + " " + sobrenome)
+        console.log(`O nome é: ${nome} ${sobrenome}`)
+
+        let fullName = nome.concat(" ").concat(sobrenome)
+        console.log(fullName)
+
+        console.log(nome.toUpperCase())
+
+        let marca = "ADIDAS"
+        console.log(marca.toLowerCase())
+
+        console.log(marca.replace('A', 'M'))
+
+        console.log(typeof(idade))
+        console.log(typeof(parseInt(idade)))
+        
+    </script>
+    
+</body>
+</html>

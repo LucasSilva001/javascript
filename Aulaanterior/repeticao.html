@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+</head>
+<body>
+    <script>
+        let valor1 = 0
+
+        while(valor1 <= 10) {
+            console.log("While - " + valor1)
+            valor1++
+            /*valor1 = valor1 + 1
+            valor += 1*/
+        }
+
+        do{
+        console.log("Do while - " + valor1)
+        valor1++
+        }while(valor1 <= 10)
+
+        for(let i = 0; i <= 10; i++){
+        console.log("for - " + i)
+        }
+
+        let nomes = [
+            "Carlos",
+            "Julia",
+            "Henrique",
+            "Julian",
+            "Jean",
+            "Lucas",
+            "Alice"
+        ];
+        
+        console.log(nomes.length)
+
+        for(let i = 0; i < nomes.length; i++) {
+            console.log(nomes[i])
+        }
+
+        console.log("-------------")
+
+        for(let nome of nomes) {
+            console.log(nome)
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" name="nome" id="nome" placeholder="nome">
+        <input type="number" name="nota1" id="nota01">
+        <input type="number" name="nota2" id="nota02">
+        <input type="number" name="nota3" id="nota03">
+        <input type="number" name="nota4" id="nota04">
+        <button class="botao" onclick="calcularMedia()">calcular</button>
+        <div id="campo"> </div>
+    </div>
+
+    <script>
+        function calcularMedia(){
+            let box = document.getElementById("box")
+            let nome = document.querySelector("#nome")
+            let nota01 = document.querySelector("#nota01")
+            let nota02 = document.querySelector("#nota02")
+            let nota03 = document.querySelector("#nota03")
+            let nota04 = document.querySelector("#nota04")
+            let campo = document.querySelector("#campo")
+            let botao = document.querySelector(".botao")
+
+            let media = ((Number.parseFloat(nota01.value) + Number.parseFloat(nota02.value) + Number.parseFloat(nota03.value) + Number.parseFloat(nota04.value)) / 4)
+            campo.innerHTML += `<p> nota01: ${nota01.value}`
+            campo.innerHTML += `<p> nota02: ${nota02.value}`
+            campo.innerHTML += `<p> nota03: ${nota03.value}`
+            campo.innerHTML += `<p> nota04: ${nota04.value}`
+            campo.innerHTML += `<p>${nome.value}, sua média foi: ${media}`
+            
+            if(media >= 7){
+                campo.innerHTML += `<p> Aprovado </p>`
+            } else if (media < 4) {
+                campo.innerHTML += `<p> Reprovado </p>`
+            } else {
+                campo.innerHTML += `<p> Exame </p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

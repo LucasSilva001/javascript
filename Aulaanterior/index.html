@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula WEB</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" name="nome" id="nome">
+        <button class="botao" onclick="salvarNome()">Salvar</button>
+    </div>
+
+    <script>
+        let box = document.getElementById("box")
+        let nome = document.getElementById("nome")
+        let botao = document.querySelector(".botao")
+
+
+        box.style.border = "solid 2px #349eeb"
+        box.style.width = "600px"
+        box.style.margin = "auto"
+        box.style.height = "80px"
+        box.style.borderRadius = "5px"
+
+        botao.style.width = "60px"
+        botao.style.height = "40px"
+        botao.style.fontsize = "16px"
+        botao.style.fontWeight = "600"
+        botao.style.backgroundColor = "#bad1f5"
+        botao.style.border = "0"
+        botao.style.borderRadius = "4px"
+        botao.style.color = "#070bf5"
+
+        nome.style.height = "30px"
+        nome.style.border = "solid 2px #070bf5"
+        nome.style.borderRadius = "4px"
+        nome.style.color = "#070bf5"
+
+        function salvarNome() {
+            box.innerHTML += `<p>O nome informado foi ${nome.value}</p>`
+        }
+
+        /*
+        Campos: informar o nome, informar quatro notas;
+        Função: calcular a média e imprimir as notas, a média, o nome
+            do aluno e a situação (aprovado, exame, reprovado)
+        Estilização dos elementos em javascript
+        */ 
+
+</script>
+    
+</body>
+</html>

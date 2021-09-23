@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <div id="box">
+
+        <span> Nome: </span>
+        <input type="text" name="nome" id="nome">
+        <span> peso: </span>
+        <input type="number" name="peso" id="peso" >
+        <span> altura: </span>
+        <input type="number" name="altura" id="altura">
+        <button class="botao" onclick="calcularIMC()"> calcular </button>
+
+    </div>
+    <div id="campo"> </div>
+    <script>
+        function calcularIMC(){
+            let box = document.getElementById("box")
+            let nome = document.querySelector("#nome").value
+            let peso = document.querySelector("#peso").value
+            let altura = document.querySelector("#altura").value
+            let campo = document.querySelector("#campo")
+            let botao = document.querySelector(".botao")
+
+            let IMC = (Number.parseFloat(peso) / (Number.parseFloat(altura) * Number.parseFloat(altura)))
+            campo.innerHTML += `<p> nome ${nome}</p>`
+            campo.innerHTML += `<p> Seu IMC é ${IMC}</p>`
+
+            if (IMC < 18.5) {
+                campo.innerHTML += `<p> Abaixo do peso</p>`
+            } else if (IMC < 24.9) {
+                campo.innerHTML += `<p> Peso normal</p>`
+            } else if (IMC < 29.9) {
+                campo.innerHTML += `<p> Sobrepeso</p>`
+            }else if(IMC < 34.9 ) {
+                campo.innerHTML += `<p> Obesidade Grau I</p>`
+            } else if(IMC <39.9) {
+                campo.innerHTML += `<p> Obesidade Grau II</p>`
+            } else {
+                campo.innerHTML += `<p> Obesidade Grau III ou Mórbida</p>`
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
