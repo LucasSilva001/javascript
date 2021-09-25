@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,41 @@
     <title>Idade</title>
 </head>
 <body>
-    <div></div>
-    <span>Nome</span>
-    <input type="text" name="" id="">
-    <span></span>
+    <div id="box">
+        <span>Nome: </span>
+        <input type="text" name="nome" id="nome">
+        <span>Ano de Nascimento: </span>
+        <input type="number" name="anoDeNascimento" id="ano">
+        <button class="botao" onclick="calcular()">calcular</button> 
+    </div>
+    
+    <div id="campo"></div>
+
+    <script>
+        function calcular() {
+            let box = document.getElementById("box")
+            let nome = document.querySelector("#nome").value
+            let anoDeNascimento = document.querySelector("#ano").value
+            let campo = document.querySelector("#campo")
+            let botao = document.querySelector(".botao")
+
+            let idade = 2021 - anoDeNascimento
+            campo.innerHTML += `<p> Nome: ${nome}</p>`
+            campo.innerHTML += `<p> Idade: ${idade}</p>`
+            
+            if(idade < 12) {
+                campo.innerHTML += `<p>Criança</p>`
+            } else if(idade <18) {
+                campo.innerHTML += `<p>Jovem</p>`
+            } else if(idade <65) {
+                campo.innerHTML += `<p>Adulto</p>`
+            } else {
+                campo.innerHTML += `<p>Idoso</p>`
+            }
+            
+        } 
+
+    </script>
     
 </body>
 </html>
